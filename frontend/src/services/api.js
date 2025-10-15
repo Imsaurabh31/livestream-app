@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.NODE_ENV === 'production' ? '/api' : 'http://127.0.0.1:5000/api';
+const API_BASE_URL = 'https://livestream-app-seven.vercel.app/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,

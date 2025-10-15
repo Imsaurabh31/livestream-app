@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { streamAPI } from '../services/api';
 
 const VideoPlayer = ({ overlays }) => {
@@ -6,7 +6,7 @@ const VideoPlayer = ({ overlays }) => {
   const [rtspUrl, setRtspUrl] = useState('Demo Stream - Click Play');
   const [volume, setVolume] = useState(1);
   const [error, setError] = useState('');
-  const videoRef = useRef(null);
+
   const imgRef = useRef(null);
 
   const handlePlay = async () => {
@@ -16,8 +16,7 @@ const VideoPlayer = ({ overlays }) => {
       setIsPlaying(true);
       
       if (imgRef.current) {
-        const baseUrl = process.env.NODE_ENV === 'production' ? '' : 'http://127.0.0.1:5000';
-        imgRef.current.src = `${baseUrl}/api/stream/video?t=${Date.now()}`;
+        imgRef.current.src = `https://livestream-app-seven.vercel.app/api/stream/video?t=${Date.now()}`;
         imgRef.current.onload = () => setError('');
         imgRef.current.onerror = () => {
           setError('Backend not running. Start backend first.');

@@ -15,7 +15,7 @@ const OverlayManager = ({ onOverlaysChange }) => {
 
   useEffect(() => {
     fetchOverlays();
-  }, []);
+  }, [fetchOverlays]);
 
   const fetchOverlays = async () => {
     try {
