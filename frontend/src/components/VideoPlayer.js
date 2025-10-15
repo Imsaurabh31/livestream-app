@@ -16,7 +16,7 @@ const VideoPlayer = ({ overlays }) => {
       setIsPlaying(true);
       
       if (imgRef.current) {
-        imgRef.current.src = `https://livestream-app-seven.vercel.app/api/stream/video?t=${Date.now()}`;
+        imgRef.current.src = `https://livestream-app-git-main-mishrasaurabhstms-projects.vercel.app/api/stream/video?t=${Date.now()}`;
         imgRef.current.onload = () => setError('');
         imgRef.current.onerror = () => {
           setError('Backend not running. Start backend first.');

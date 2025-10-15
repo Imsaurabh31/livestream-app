@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://livestream-app-seven.vercel.app/api';
+const API_BASE_URL = 'https://livestream-app-git-main-mishrasaurabhstms-projects.vercel.app/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
