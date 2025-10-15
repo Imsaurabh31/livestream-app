@@ -4,23 +4,12 @@
     {
       "src": "backend/fast_app.py",
       "use": "@vercel/python"
-    },
-    {
-      "src": "frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "backend/fast_app.py"
-    },
-    {
       "src": "/(.*)",
-      "dest": "frontend/$1"
+      "dest": "backend/fast_app.py"
     }
   ]
 }
