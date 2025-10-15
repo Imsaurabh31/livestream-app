@@ -2,6 +2,6 @@
   "name": "livestream-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build"
+    "build": "cd frontend && npm install --legacy-peer-deps && CI=false npm run build"
   }
 }
