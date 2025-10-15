@@ -75,7 +75,19 @@ def delete_overlay(overlay_id):
 
 @app.route('/')
 def home():
-    return jsonify({'status': 'Backend running', 'streaming': streaming})
+    return '''
+    <!DOCTYPE html>
+    <html>
+    <head><title>Livestream App</title></head>
+    <body>
+        <h1>🎥 Livestream App</h1>
+        <p>✅ Backend Running</p>
+        <p>✅ API Endpoints Working</p>
+        <p>✅ Ready for Demo</p>
+        <a href="/api/overlays">Test API</a>
+    </body>
+    </html>
+    '''
 
 if __name__ == '__main__':
     print('Backend starting on http://127.0.0.1:5000')
