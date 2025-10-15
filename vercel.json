@@ -4,12 +4,20 @@
     {
       "src": "backend/fast_app.py",
       "use": "@vercel/python"
+    },
+    {
+      "src": "frontend/build/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/api/(.*)",
       "dest": "backend/fast_app.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "frontend/build/$1"
     }
   ]
 }
