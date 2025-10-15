@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { overlayAPI } from '../services/api';
 
 const OverlayManager = ({ onOverlaysChange }) => {
@@ -13,7 +13,7 @@ const OverlayManager = ({ onOverlaysChange }) => {
     size: { width: 200, height: 50 }
   });
 
-  useEffect(() => {
+  React.useEffect(() => {
     fetchOverlays();
   }, []);
 
